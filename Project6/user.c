@@ -29,6 +29,8 @@ struct person* create_person(char name[]) {
 	return p;
 }
 
+//
+
 struct person* find_person(struct person *head, char name[]) {
 	struct person* i = head;
 	while (i != NULL) {
@@ -40,7 +42,7 @@ struct person* find_person(struct person *head, char name[]) {
 	return NULL;
 }
 
-struct person* insert_person(char name[], struct person **head) { // 调用的时候传&head
+struct person* insert_person(char name[], struct person **head) {   // 调用的时候传&head
 	if (find_person(*head, name) != NULL) {
 		printf("This user was already exist.\n");
 		return NULL;
